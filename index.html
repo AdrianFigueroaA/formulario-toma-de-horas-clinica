@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Formulario de Registro</title>
+</head>
+
+<body>
+    <h1>Reserva de Hora</h1>
+
+    <form onsubmit="return validar()">
+
+        <div class="contenedor-inputs">
+
+
+            <input  id="rut" name="rut" placeholder="Rut" class="inputcss">
+            <input  id="nombre" name="nombre" placeholder="Nombre" class="inputcss">
+            <input  id="apellidos" name="apellidos" placeholder="Apellidos" class="inputcss">
+            <input  id="edad" name="edad" placeholder="Edad" class="inputcss">
+            <input  id="correo" name="correo" placeholder="Correo" class="inputcss">
+
+
+            <label for="especialidad">Especialidad:</label>
+                    <select name="especialidad" id="especialidad">
+                        <option value="dental">Dental</option>
+                        <option value="traumatologia">Traumatologia</option>
+                        <option value="pediatria">Pediatria</option>
+                        <option value="cardiologia">Cardiologia</option>
+                    </select>
+
+                    <label for="start">Seleccione Fecha:</label>
+
+<input type="date" id="fecha" name="fecha" value="2020-07-22" min="2020-01-01" max="2020-12-31">
+
+
+
+       <label for="hora">Hora de Atencion:</label>
+       <select name="hora" id="hora">
+           <option value="09:00">09:00</option>
+           <option value="09:30">09:30</option>
+           <option value="10:00">10:00</option>
+           <option value="10:30">10:30</option>
+       </select>
+
+
+            <input id="boton" type="submit" value="Reservar" class="btn-enviar">
+        </div>
+    </form>
+
+
+
+    <div id="mensaje"></div>
+ 
+    <script src="index.js"></script>
+</body>
+
+</html>
+
+
+
+
+<!-- /* Rut: campo de texto. (validar su formato)
+
+Nombres: campo de texto. (validar que contenga sólo letras)
+Apellidos: campo de texto. (validar que contenga sólo letras)
+Edad: campo de texto. (validar que se ingrese sólo números)
+Email: campo de texto. (validar su formato)
+
+Especialidad: lista desplegable o select (no requiere validación)
+Fecha: campo de texto. (validar que sea una fecha en formato dd-mm-yyyy)
+
+Hora: lista desplegable o select (no requiere validación)
+
+
+Cada validación que se le solicita debe ser realizada mediante expresiones regulares, según
+corresponda el caso.
+
+El formulario debe contar con un botón con el texto “Reservar”, el cual validará los datos ingresados
+y desplegará un mensaje al usuario con lo siguiente:
+
+Estimado(a) [nombre y apellido del paciente], su hora para [especialidad] ha sido reservada para el
+día [fecha] a las [hora]. Además, se le envió un mensaje a su correo [email] con el detalle de su cita.
+Gracias por preferirnos.
+
+Los datos entre corchetes deben ser reemplazados por los datos ingresados en el formulario, según
+corresponda. Este mensaje puede ser mostrado dentro de un elemento "div" que usted sitúe dentro
+del código HTML.
+
+Si el paciente hace click en el botón de Reservar y, alguno de los datos no son válidos, se debe
+desplegar un mensaje de alerta informando que dicho dato no pudo ser validado. El mensaje debe
+ser descriptivo.
+
+Tanto las validaciones como el mensaje de éxito de reserva, deben estar situados en funciones
+distintas y ser invocadas entre sí, según corresponda.
+
+Instrucciones
+1. Crear HTML del formulario.
+2. Crear función de validación de formulario .
+3. Crear función de reserva exitosa.
+4. Crear listener para asociar la acción click del botón de reserva con la validación del formulario. */ -->
