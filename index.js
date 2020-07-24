@@ -1,3 +1,8 @@
+
+
+
+
+
 function validar() {
 
     
@@ -33,47 +38,56 @@ function validar() {
     
     {
         alert("Todos los Campos son Obligatorios");
-        return false;
+    return false;
     }
+    else if (!rutRegex.test(rut.value)) { //valida que lo ingresado sea el rut
+        console.log(rut.value);
+        alert("Ingrese rut en formato correcto");
+    return false
+    }
+
     else if (!letrasRegex.test(nombre.value)) { //valida que lo ingresado sean letras
         console.log(nombre.value);
         alert("Ingrese solo Letras para su Nombre");
-        return false
+    return false
     }
     else if (!letrasRegex.test(apellidos.value)) { //valida que lo ingresado sean letras
         console.log(apellidos.value);
         alert("Ingrese solo Letras para su Apellido");
-        return false
+    return false
     }
     else if (!edadRegex.test(edad.value)){ //valida que lo ingresado sean numeros
         console.log(edad.value);
-    alert("Edad debe ser Solo Numeros");
+        alert("Edad debe ser Solo Numeros");
     return false;
     }
     else if (emailRegex.test(correo.value)) { //valida que lo ingresado tenga formato de correo
         console.log(correo.value);
         alert("Ingrese un Correo Valido");
-        return false;
-    }
-    else if (!fechaRegex.test(fecha.value)){ //valida la fecha ingresada
-        console.log(fecha.value);
-    
     return false;
     }
+    
+else {
+    console.log(alert);
+   alert(` Estimado ${nombre.value} ${apellidos.value},su hora para ${especialidad.value} ha sido reservada para el
+        día ${fecha.value} a las ${hora.value} Además, se le envió un mensaje a su correo ${correo.value} con el detalle de su cita.
+        Gracias por preferirnos`);
+
+}
 
 }
 
 
-document.getElementById("boton").addEventListener("click", function() 
-{
-
-console.log(mensaje);
-
-    alert(`Estimado ${nombre.value} ${apellidos.value},su hora para ${especialidad.value} ha sido reservada para el
-    día ${fecha.value} a las ${hora.value} Además, se le envió un mensaje a su correo ${correo.value} con el detalle de su cita.
-    Gracias por preferirnos`)
-
-  });
 
 
 
+
+
+
+
+    // document.getElementById("boton").addEventListener("click") 
+    
+
+        console.log(mensaje);
+    
+        
