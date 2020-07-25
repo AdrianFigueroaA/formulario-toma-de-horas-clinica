@@ -34,6 +34,7 @@ body{
   }
   h1{
      text-align: center;
+     color: black;
      
   }
 
@@ -46,4 +47,14 @@ input,
 label {
     margin: .4rem 0;
     color: black;
+}
+
+#mensaje{
+
+text-align: center;
+color: black;
+font-family: sans-serif;
+background: whitesmoke;
+
+
 }

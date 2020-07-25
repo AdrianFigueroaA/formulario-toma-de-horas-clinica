@@ -1,8 +1,3 @@
-
-
-
-
-
 function validar() {
 
     
@@ -24,9 +19,6 @@ function validar() {
      const emailRegex   = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$i/;
      const fechaRegex = /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/;
 
-
-
-
     //valida que todos los campos sean llenados
     if (
         rut.value === ""||
@@ -45,7 +37,6 @@ function validar() {
         alert("Ingrese rut en formato correcto");
     return false
     }
-
     else if (!letrasRegex.test(nombre.value)) { //valida que lo ingresado sean letras
         console.log(nombre.value);
         alert("Ingrese solo Letras para su Nombre");
@@ -67,27 +58,27 @@ function validar() {
     return false;
     }
     
-else {
-    console.log(alert);
-   alert(` Estimado ${nombre.value} ${apellidos.value},su hora para ${especialidad.value} ha sido reservada para el
+    else{
+
+    mensajeExito()
+return false
+    }
+}
+
+
+
+function mensajeExito() {
+    
+    console.log("Estimado ")
+
+    document.getElementById("mensaje").innerHTML =` Estimado ${nombre.value} ${apellidos.value},su hora para ${especialidad.value} ha sido reservada para el
         día ${fecha.value} a las ${hora.value} Además, se le envió un mensaje a su correo ${correo.value} con el detalle de su cita.
-        Gracias por preferirnos`);
+        Gracias por preferirnos`;
 
 }
 
-}
 
 
 
 
-
-
-
-
-
-    // document.getElementById("boton").addEventListener("click") 
-    
-
-        console.log(mensaje);
-    
-        
+   

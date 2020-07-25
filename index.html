@@ -9,10 +9,11 @@
 </head>
 
 <body>
-    <h1>Reserva de Hora</h1>
+    
 
     <form onsubmit="return validar()">
-
+        <h1>Reserva de Hora</h1>
+        <div id="mensaje"></div>
         <div class="contenedor-inputs">
 
 
@@ -46,13 +47,15 @@
        </select>
 
 
-            <input id="boton" type="submit" value="Reservar" class="btn-enviar">
+            <input  id="boton" type="submit" value="Reservar" class="btn-enviar">
+
+            
         </div>
     </form>
 
 
 
-    <div id="mensaje"></div>
+    
  
     <script src="index.js"></script>
 </body>
